@@ -59,38 +59,38 @@
             tipoPet: "cachorro"
         }
         ];
-        //       //Listar somente os gatos >>>
-        // let cats = pets.filter((animal) => {
-        //  return animal.tipoPet == 'gato';
-        // });
+              //Listar somente os gatos >>>
+        let cats = pets.filter((animal) => {
+         return animal.tipoPet == 'gato';
+        });
         
-        // console.log(cats);
+        console.log(cats);
 
-        //       //Listar a idade dos pets que têm 7 ou mais anos 
-        // let idadeAnimals = pets.filter((animal) =>{
-        //     return animal.idade >=7
-        // });
-        // console.log(idadeAnimals)
+              //Listar a idade dos pets que têm 7 ou mais anos 
+        let idadeAnimals = pets.filter((animal) =>{
+            return animal.idade >=7
+        });
+        console.log(idadeAnimals)
 
-        //      //Listar os nomes dos animais
-        // let nomeAnimais = pets.filter((animal)=>{
-        //     return animal.nome;
-        // });
-        // console.log(nomeAnimais);
+             //Listar os nomes dos animais
+        let nomeAnimais = pets.filter((animal)=>{
+            return animal.nome;
+        });
+        console.log(nomeAnimais);
 
-        //         //Quantidade de cachorros
-        // let qtdCachorros = pets.filter(animais =>{
-        //     return animais.tipoPet == "cachorro"
-        // });
-        //     qtdCachorros.filter(animais =>{
-        //         console.log(animais.tipoPet == "cachorro")
-        //     });
+                //Quantidade de cachorros
+        let qtdCachorros = pets.filter(animais =>{
+            return animais.tipoPet == "cachorro"
+        });
+            qtdCachorros.filter(animais =>{
+                console.log(animais.tipoPet == "cachorro")
+            });
 
-        //     //Calculo da idade de todos os Pet's
-        // var calculoIdade = pets.reduce((sum,animal)=>{
-        //     return sum + animal.idade;
-        // },0);
-        // console.log(calculoIdade);
+            //Calculo da idade de todos os Pet's
+        var calculoIdade = pets.reduce((sum,animal)=>{
+            return sum + animal.idade;
+        },0);
+        console.log(calculoIdade);
         
 
 

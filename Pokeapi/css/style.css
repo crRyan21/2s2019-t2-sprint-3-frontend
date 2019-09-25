@@ -1,0 +1,39 @@
+html{
+    background-color: rgb(255, 255, 255);
+}
+#tabela{
+    /* background-color: rgb(148, 148, 148); */
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
+#th_red {
+    color :rgb(189, 32, 32);
+}
+
+#th_blue {
+    color: rgb(41, 41, 88);
+}
+#pesquisar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+}
+#btn__cadastrar{
+    border-radius: 30px;
+    position: relative;
+    left: 20px;;
+    background-color: rgb(41, 41, 88)
+}
+#btn__cadastrar:hover{
+    background-color: rgb(158, 23, 23)
+}
+
+#btn__cadastrar {
+    color: white;
+}
+#logo img{
+    width:170px;
+    height: 96px;
+}

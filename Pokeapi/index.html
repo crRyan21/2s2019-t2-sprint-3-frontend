@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PokeApi</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="logo">
+        <img src="img/pokemon-go-logo-F26FDCA39C-seeklogo.com.png" alt="">
+    </div>
+  </header>
+  <section id="tabela" >
+    <div id="pesquisar">
+      <input
+      type="text"
+      class="class__categoria"
+      id="input__categoria"
+      placeholder="Pokemon"
+    />
+    <button
+    id="btn__cadastrar"
+    class="conteudoPrincipal-btn conteudoPrincipal-btn-cadastro"
+  >
+    Search
+  </button>
+</div>
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          
+          <th scope="col "id="th_blue" >Nome</th>
+          <th scope="col" id="th_red">Habilidade</th>
+          <th scope="col"id="th_blue">Foto</th>
+          <th scope="col"id="th_red">Altura</th>
+          <th scope="col"id="th_blue">Peso</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-lista-corpo"></tbody>
+    </table>
+    <div class="container">
+        
+<script>
+  const tabela = document.querySelector('#tabela-lista-corpo');
+  const URL = "https://pokeapi.co/api/v2/pokemon";
+
+  fetch(URL)
+  .then(resposta => resposta.json())
+  .then (data => construirTabela(data))
+  .catch(erro => console.log(erro));
+
+  function construirTabela(data){
+    
+
+
+    data.results.forEach((element) => {
+      
+      console.log(element);
+
+      const tr = document.createElement('tr');
+      
+      const td_nome = document.createElement('td');
+      const td_habilidade = document.createElement('td');
+      const td_img = document.createElement('td');
+      const td_tam = document.createElement('td');
+      const td_peso = document.createElement('td');
+
+  
+      td_nome.textContent = element.name;
+      td_habilidade.textContent = element.abilities
+      // td_img
+      td_tam.textContent = element.height;
+      td_peso.textContent = element.weight;      
+
+      tr.appendChild(td_nome);
+      tr.appendChild(td_habilidade);
+      tr.appendChild(td_img);
+      tr.appendChild(td_tam);
+      tr.appendChild(td_peso);
+
+      tabela.appendChild(tr);
+    });
+  }
+
+</script>           
+</body>
+</html>
