@@ -6,16 +6,29 @@ import * as serviceWorker from './serviceWorker';
 import categoria from './pages/Categoria/Categoria';
 
 //rotas
-import {Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom';
+import {Route, Link, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom';
 import Categoria from './pages/Categoria/Categoria';
 import NaoEncontrado from './pages/NaoEncontrado/NaoEncontrado';
+import Login from './pages/Login/Login';
 
+    const RotaPrivada = ({component: Component, ...rest}) =>{
+       <Route
+           {... rest}
+            render={props =>
+                localStorage.getItem("usuario-gufos")  ! == null ?
+                <Component {...props} />
+            :
+                
+            }
+            />
+        }
     const routing = ( // roteamento de browser
     <Router>
         <div>
             <Switch>
                 <Route exact path='/' component ={App} />
                 <Route path='/categoria' component={Categoria}/>
+                <Route path= '/login' component = {Login} />
                 <Route component ={NaoEncontrado} />
             </Switch>
         </div>
