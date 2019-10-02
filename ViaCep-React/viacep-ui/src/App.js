@@ -98,7 +98,9 @@ class Endereco extends Component{
                           <input type="text" class="form-control" id="input-ibge"  size="8" placeholder="IBGE" />
                         </div>
                     </div>
-                    <button className="btn btn__login" id="btn__login">
+                    <button className="btn btn__login" id="btn__login"
+                   // style={{position:"relative",justifyContent: "center", left:}}
+                    >
                         Enviar
                     </button>
             </form>
