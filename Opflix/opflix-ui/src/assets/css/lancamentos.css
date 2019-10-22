@@ -1,0 +1,219 @@
+.filmes_lancamento img{
+margin: 3px;
+width:180px ;
+height:265px;
+}
+.filmes_lancamento{
+    margin-bottom: 20px;
+    /* height: 300px; */
+    width: 900px;
+}
+.filmes_lancamento p{
+    color: white;
+    font-size: 18px;
+    
+}
+#lancamentos{
+    position: relative;
+    top: 70px;
+    margin-left: 40px;
+   
+}
+.filmes_column{
+    display: flex;
+    flex-direction: column;
+}
+.filmes_info{
+    display: flex;
+    flex-direction: row;
+}
+.sinopse p{
+    position: relative;
+    margin: 30px;
+}
+.duracao{
+    position: relative;
+    margin-left:30px;
+}
+.duracao p{
+    font-size: 15px;
+  color: rgb(179, 179, 179);
+}
+.lancamento{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+.lancamento p{
+    font-size: 15px;
+  color: rgb(179, 179, 179);
+}
+.info_row{
+    display: flex;
+}
+.info2_row{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.plataforma{
+    margin-left: 30px;
+}
+.plataforma p{
+    font-size: 15px;
+  color: rgb(179, 179, 179);
+}
+.genero{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+.genero p{
+    font-size: 15px;
+  color: rgb(179, 179, 179);
+}
+.filmes_nome input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+.filmes_nome input{
+    height: 25px;
+    margin-bottom: 30px;
+    width: 148px;
+    text-align: center;
+    font-size: 18px;
+
+}
+.filmes_img input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+.filmes_img input{
+    height: 25px;
+    margin-bottom: 30px;
+    height: 168px;
+    width: 148px;
+}
+.genero input{
+    position: relative;
+    bottom: 58px;
+    height: 25px;
+    /* margin-bottom: 30px; */
+    width: 148px;
+    margin-left: 70px;
+    text-align: center;
+    font-size: 18px;
+}
+.genero input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+.sinopse textarea{
+    position: relative;
+    bottom: 175px;
+    height: 170px;
+    margin-bottom: 30px;
+    width: 148px;
+    margin-left: 70px;
+}
+.sinopse textarea::placeholder{
+    text-align: center;
+    position: relative;
+    position: relative;
+    top: 70px;
+    font-size: 18px;
+}
+.lancamento input{
+    position: relative;
+    bottom: 58px;
+    height: 25px;
+    /* margin-bottom: 30px; */
+    width: 148px;
+    /* margin-left: 70px; */
+}
+.lancamento input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+.estreia input{
+    position: relative;
+    bottom: 28px;
+    height: 25px;
+    /* margin-bottom: 30px; */
+    width: 148px;
+    /* margin-left: 70px; */
+}
+.estreia input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+.plataforma input {
+    margin-top: 30px;
+    position: relative;
+    bottom: 58px;
+    height: 25px;
+    /* margin-bottom: 30px; */
+    width: 148px;
+    position: relative;
+    right: 30px;
+    /* margin-left: 70px; */
+    text-align: center;
+    font-size: 18px;
+}
+.plataforma input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+.duracao input {
+    margin-top: 30px;
+    position: relative;
+    bottom: 58px;
+    height: 25px;
+    /* margin-bottom: 30px; */
+    width: 148px;
+    position: relative;
+    right: 30px;
+    /* margin-left: 70px; */
+    text-align: center;
+    font-size: 18px;
+}
+.duracao input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+.button{
+    position: relative;
+    left:  106px;
+    bottom: 230px;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+}
+.button:hover{
+    cursor: pointer;
+}
+.cadastrarLancamento{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 20px;
+}
+.cadastrarLancamento li{
+    list-style-type: none;
+}
+.cadastrarLancamento:hover{
+  color: rgb(124, 124, 124);
+  
+}
+#lancamentos_cadastrar{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+}
+

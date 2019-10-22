@@ -1,0 +1,30 @@
+.lancamentos_container{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    /* bottom: 520px; */
+}
+.lancamentos_container h2{
+    text-align: center;
+    position: relative;
+    /* bottom: 80px; */
+    font-family:  'Rockwell', 'Geneva', sans-serif;
+    
+    color:white;
+    font-size: 30px;
+}
+.lancamentos_coluna img{
+    border-radius: 5px;
+    margin-bottom: 30px;
+    /* margin-left: 20px; */
+}
+body{
+    background-color: #1E112a;
+    background-image: url(//img/banner.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
