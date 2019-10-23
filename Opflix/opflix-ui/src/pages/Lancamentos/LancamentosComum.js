@@ -18,12 +18,12 @@ import Footer from '../../components/Footer/Footer';
 import { parseJwt } from "../../services/auth";
 
 
-export default class Lancamentos extends Component{
+export default class LancamentosComum extends Component{
 
     constructor(){
         super();
         this.state = {
-            permissao: "",
+            // permissao: "",
             lista: [],
             listaCategoria:[],
             
@@ -31,7 +31,7 @@ export default class Lancamentos extends Component{
     }
 
     componentDidMount(){
-        this.setState({permissao: parseJwt().Permissao})
+        // this.setState({permissao: parseJwt().Permissao})
         this.listaAtualizada();
         this.listaAtualizadaCategoria();
     }
@@ -152,10 +152,7 @@ export default class Lancamentos extends Component{
                                 
                             )
                         })}
-                         {(this.state.permissao === "ADMINISTRADOR") ? 
-                            (
-                            <li><Link className="cadastrarLancamento" to="/cadastrarLancamento">Cadastrar Lancamento</Link></li>
-                            ): ''}
+                         
                    </section>
 
                </main>

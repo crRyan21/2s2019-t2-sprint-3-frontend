@@ -13,11 +13,13 @@ import Miranha from '../../assets/img/Miranha.jpg';
 import Coringa from '../../assets/img/Coringa.jpg';
 import ItCoisa from '../../assets/img/ItCoisa.jpg';
 import Avengers from '../../assets/img/Avengers.jpg';
-import CincoPassos from '../../assets/img/5passos.jpg';
 import ReiLeao from '../../assets/img/ReiLeao.jpg';
+import CincoPassos from '../../assets/img/5passos.jpg';
+import Favicon from '../../assets/img/Sem Título-1.png';
+
 
 import Header from '../../components/Header/Header';
-
+import Footer from '../../components/Footer/Footer';
 
 
 import {Link} from 'react-router-dom';
@@ -45,6 +47,7 @@ export default class App extends Component {
     render(){   
   return (
     <div>
+    <link rel="shortcut icon" type="image/x-icon" href={Favicon}/>
          
         <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet"/>
@@ -98,6 +101,7 @@ export default class App extends Component {
 
                 </div>
             </section>
+            <Footer/>
     
 </div>
   );

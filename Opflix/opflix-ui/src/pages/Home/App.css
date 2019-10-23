@@ -120,4 +120,25 @@ body{
   margin-bottom: 30px;
   /* margin-left: 20px; */
 }
+.Rodapé{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.Rodapé img{
+  position: relative;
+  margin-top: 20px;  
+  left: 15px;
+}
+.Logo_txt p{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top: 7px;
+  font-size: 10px;
+
+}
 

@@ -91,6 +91,7 @@ export default class CadastrarLancamento extends Component{
 
         })
         
+        .then(this.props.history.push('/lancamentos'))
         .catch(erro => { 
             this.setState({ erro: "Deu ruim"});
             console.log(erro);

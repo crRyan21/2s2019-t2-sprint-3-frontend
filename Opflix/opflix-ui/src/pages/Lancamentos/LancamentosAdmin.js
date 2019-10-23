@@ -18,7 +18,7 @@ import Footer from '../../components/Footer/Footer';
 import { parseJwt } from "../../services/auth";
 
 
-export default class Lancamentos extends Component{
+export default class LancamentosAdmin extends Component{
 
     constructor(){
         super();
@@ -106,6 +106,7 @@ export default class Lancamentos extends Component{
                      <li><Link to="/cadastro" >Cadastro</Link></li>
                     </div>
                      </div>
+                     {this.state.permissao}
                 </ul>
             </nav>
             </header>
@@ -152,10 +153,9 @@ export default class Lancamentos extends Component{
                                 
                             )
                         })}
-                         {(this.state.permissao === "ADMINISTRADOR") ? 
-                            (
+                         
                             <li><Link className="cadastrarLancamento" to="/cadastrarLancamento">Cadastrar Lancamento</Link></li>
-                            ): ''}
+                            
                    </section>
 
                </main>
