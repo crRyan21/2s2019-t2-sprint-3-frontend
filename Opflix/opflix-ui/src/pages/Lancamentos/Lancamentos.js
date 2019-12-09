@@ -23,7 +23,6 @@ export default class Lancamentos extends Component{
     constructor(){
         super();
         this.state = {
-            permissao: "",
             lista: [],
             listaCategoria:[],
             
@@ -46,7 +45,7 @@ export default class Lancamentos extends Component{
         // })
         //     .then(response => response.json())
         //     .then(data => this.setState({lista: data}))
-        Axios.get('http://localhost:5000/api/lancamentos',{
+        Axios.get('http://192.168.4.183:5000/api/lancamentos',{
             headers:{ Authorization: 'Bearer ' + localStorage.getItem('usuario-opflix')}
         }
         )
@@ -56,7 +55,7 @@ export default class Lancamentos extends Component{
         })
     }
     listaAtualizadaCategoria = () =>{
-        Axios.get('http://localhost:5000/api/categorias',{
+        Axios.get('http://192.168.4.183:5000/api/categorias',{
             headers:{ Authorization: 'Bearer ' + localStorage.getItem('usuario-opflix')}
         }
         )
@@ -69,7 +68,7 @@ export default class Lancamentos extends Component{
     adicionaItem =(event) => {
         event.preventDefault();
         console.log(this.state.nome);
-        fetch('http://localhost:5000/api/lancamentos',{
+        fetch('http://192.168.4.183:5000/api/lancamentos',{
             method: 'POST',
             body: JSON.stringify({nome: this.state.nome}),
             headers: {
@@ -152,10 +151,11 @@ export default class Lancamentos extends Component{
                                 
                             )
                         })}
-                         {(this.state.permissao === "ADMINISTRADOR") ? 
-                            (
-                            <li><Link className="cadastrarLancamento" to="/cadastrarLancamento">Cadastrar Lancamento</Link></li>
-                            ): ''}
+                        
+                           <li><Link className="cadastrarLancamento" to="/cadastrarLancamento">Cadastrar Lancamento</Link></li>
+                           <li><Link className="cadastrarLancamento" to="/mapa">Encontrar Local</Link></li>
+
+                       
                    </section>
 
                </main>

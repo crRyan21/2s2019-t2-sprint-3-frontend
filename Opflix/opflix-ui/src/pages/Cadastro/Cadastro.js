@@ -12,13 +12,14 @@ class Cadastro extends Component{
     constructor(){
         super();
         this.state = {
-            nome:"",
-            email: "",
-            senha: "",
-            telefone:"",
-            cep: "",
-            numero: "",
-            permissao:"",
+            nome: null,
+            email: null,
+            senha: null,
+            telefone:null,
+            cep: null,
+            numero: null,
+            permissao:null,
+            foto:null,
             erro: ""
         }
     }
@@ -56,6 +57,10 @@ class Cadastro extends Component{
       this.setState({permissao: event.target.value});
       console.log(this.state)
   }
+  atualizaFoto = (event) =>{
+    this.setState({foto: event.target.value});
+    console.log(this.state)
+}
 
     // listaAtualizada = () =>{
     //     fetch('http://localhost:5000/api/usuarios')
@@ -65,7 +70,7 @@ class Cadastro extends Component{
     adicionaItem = (event) => {
         event.preventDefault();
         console.log(this.state.email);
-        fetch('http://localhost:5000/api/usuarios',{
+        fetch('http://192.168.4.183:5000/api/usuarios',{
             method: "POST",
             body: JSON.stringify(
                 { 
@@ -75,7 +80,8 @@ class Cadastro extends Component{
                 telefone: this.state.telefone,
                 cep: this.state.cep,
                 numero: this.state.numero,
-                permissao: this.state.permissao  
+                permissao: this.state.permissao,
+                imagem: this.state.foto
                 }),
             headers: {
                 'Accept':'application/json',
@@ -199,12 +205,24 @@ class Cadastro extends Component{
                   <div className="item">
                     <input
                       className="input__login"
-                      value={this.state.permissao}
+                      value={this.state.permissao = 'COMUM'}
                       onInput={this.atualizaPermissao}
                       placeholder="PERMISSAO"
                       type="text"
                       name="password"
                       id="login__email"
+                    />
+                  </div>
+                  <div className="item">
+                    <input
+                      className="input__login"
+                      value={this.state.foto}
+                      onInput={this.atualizaFoto}
+                      placeholder="Link de Imagem para foto de Perfil"
+                      type="text"
+                      name="password"
+                      id="login__email"
+                      
                     />
                   </div>
                   <div className="item">

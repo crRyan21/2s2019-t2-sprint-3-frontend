@@ -8,13 +8,12 @@ import App from './pages/Home/App';
 import Login from './pages/Login/Login';
 import Lancamentos from './pages/Lancamentos/Lancamentos';
 import CadastrarLancamento from './pages/CadastrarLancamento/CadastrarLancamento';
+import Localizacoes from './pages/Localizacoes/mapa.js';
 
 import * as serviceWorker from './serviceWorker';
 import Cadastro from './pages/Cadastro/Cadastro';
 
 import { parseJwt } from './services/auth';
-import LancamentosComum from "./pages/Lancamentos/LancamentosComum";
-import LancamentosAdmin from "./pages/Lancamentos/LancamentosAdmin";
 
 //rotas
 
@@ -42,14 +41,7 @@ const RotaPrivada = ({component: Component}) =>(
                 />
             )
         }
-        render={
-            props =>
-                parseJwt().Permissao === "COMUM" ? (
-                    <RotaPrivada {...props} />
-                ) : (
-                    <LancamentosAdmin {...props} />
-                )
-        }
+       
     />    
       
 );
@@ -62,7 +54,8 @@ const routing = (
                 {/* <Route path='/lancamentos' component={Lancamentos}/> */}
                 <Route path='/cadastro' component={Cadastro}/>
                 <Route path='/login' component={Login}/>
-                <RotaPrivada path='/lancamentos' component={LancamentosComum}/>
+                <RotaPrivada path='/lancamentos' component={Lancamentos}/>
+                <Route path='/mapa' component={Localizacoes} />
                 
             </Switch>
         </div>

@@ -29,7 +29,7 @@ class Login extends Component{
     efetuarLogin = (event) =>{
         event.preventDefault();
         
-        Axios.post("http://localhost:5000/api/login", {
+        Axios.post("http://192.168.4.183:5000/api/login", {
             Email: this.state.email, 
             Senha: this.state.senha
         })

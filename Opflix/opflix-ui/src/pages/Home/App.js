@@ -35,7 +35,7 @@ export default class App extends Component {
         }
 
         componentDidMount(){
-            Axios.get('https://localhost:5000/api/lancamentos')
+            Axios.get('https://192.168.4.183:5000/api/lancamentos')
                 .then(data =>{
                     this.setState({lista: data.data});
                 })

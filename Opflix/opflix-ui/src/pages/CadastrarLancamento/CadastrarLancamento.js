@@ -69,7 +69,7 @@ export default class CadastrarLancamento extends Component{
     adicionaItem = (event) => {
         event.preventDefault();
         console.log(this.state);
-        fetch('http://localhost:5000/api/lancamentos',
+        fetch('http://192.168.4.183:5000/api/lancamentos',
         {
             method: "POST",
             body: JSON.stringify(
