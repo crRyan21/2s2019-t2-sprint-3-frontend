@@ -13,18 +13,7 @@ import Axios from 'axios';
             
         };
     }
-    handleToggleOpen = () => {
-
-        this.setState({
-            isOpen: true
-        });
-    }
-    handleToggleClose = () => {
-        this.setState({
-            isOpen: false
-        });
-    }
-
+   
     componentDidMount(){
 
         this.listaAtualizadaLocal();
@@ -66,7 +55,7 @@ import Axios from 'axios';
         >
           {this.state.lista.map(element =>{
                             return(
-                                <Marker position ={{lat: element.latitude, lng : element.longitude}} text ={element.nomeLancamento} label={element.nomeLancamento.toString()} onClick={() => this.handleToggleOpen()}>
+                                <Marker position ={{lat: element.latitude, lng : element.longitude}} text ={element.nomeLancamento} label={element.nomeLancamento.toString()} >
                                     {
 			this.state.isOpen &&
 		 <InfoWindow onCloseClick={this.props.handleCloseCall}>

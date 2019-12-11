@@ -8,7 +8,7 @@ import App from './pages/Home/App';
 import Login from './pages/Login/Login';
 import Lancamentos from './pages/Lancamentos/Lancamentos';
 import CadastrarLancamento from './pages/CadastrarLancamento/CadastrarLancamento';
-import Localizacoes from './pages/Localizacoes/mapa.js';
+import Localizacoes from './pages/Localizacoes/mapa';
 
 import * as serviceWorker from './serviceWorker';
 import Cadastro from './pages/Cadastro/Cadastro';
